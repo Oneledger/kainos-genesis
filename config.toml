@@ -1,5 +1,5 @@
 [node]
-  node_name = "node-name"
+  node_name = "fullnode"
   # Fast sync allows a block to catch up quickly to the chain by downloading blocks in parallel and verifying their commits
   fast_sync = true
   # Specify what backend database to use (goleveldb|cleveldb)
@@ -7,7 +7,7 @@
   # Specify the application database directory. This is always relative to the root directory of the app.
   db_dir = "nodedata"
   # Specify the log level for olfullnode. 0: Fatal, 1: Error, 2: Warning, 3: Info, 4: Debug, 5: Detail
-  loglevel = 4
+  loglevel = 3
   # List of transaction tags to index in the database, allows them to be searched by the specified tags
   index_tags = []
   # Tells the indexer to index all available tags, IndexTags has precedence over IndexAllTags
@@ -38,11 +38,11 @@
 
 [p2p]
   # List of seed nodes to connect to
-  seeds = []
+  seeds = ["9f2581b681390633fc74b293101516e9c01cc02f@35.236.206.239:38605", "d6dd7f0bdd9c87c530b8b64fdbdc5647ce5b9f6d@35.245.216.211:38605", "dccb8926e66a113fd02037284c45f50f663db52c@35.168.34.128:38605", "6acf3643371f1041e6ecc433b22657c07a8b4415@35.169.180.253:38605"]
   # Enables seed mode, which will make the node crawl the network looking for peers
   seed_mode = false
   # List of peers to maintain a persistent connection to
-  persistent_peers = []
+  persistent_peers = ["557670e56ee3a2a9ad19a6f889677f7415e46f0e@35.236.193.8:38605", "563a922eebad5cb1efd8ea52fa3f73d32d778496@35.245.141.17:38605", "de70f9385685e696a643297a86a4d05b3722d253@35.199.54.246:38605", "da40e7dc093d89a8091a8c21b98678f17ef8ee51@35.245.241.100:38605","16ed50c88eddce3833896b23e746d4f4b7c8b632@18.215.211.244:38605", "07b321c5bfc578dd92db4782febfe6a8572f98f7@52.203.185.127:38605", "332416b96d9fc55e4936a48788978bcf0df440be@54.173.132.142:38605", "522aa64fa5fd46480deea07b3b6eabf38030293f@54.198.93.46:38605"]
   # Enable UPNP port forwarding
   upnp = false
   # Set true for strict address routability rules. If true, the node will fail to start if the given P2P address isn't routable'
